@@ -8,6 +8,7 @@ public class Server {
     static boolean isPrime(int a){
 
         boolean prime=true;
+
         for (int i=2;i<=a/2;i++){
             if(a%i==0){
                 prime=false;
@@ -36,6 +37,7 @@ public class Server {
         // Read message sent by the client
         String str = inServer.readLine();
         int nb=Integer.parseInt(str);
+        System.out.println("les nombres premiers inférieurs ou égales à "+nb);
         for(int i=2;i<nb;i++){
              if(isPrime(i))
                  System.out.println(i);
